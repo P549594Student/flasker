@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 
+# Here is the index page
 def index():
     first_name = "Harry"
     stuff = "This is text"
