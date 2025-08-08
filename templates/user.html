@@ -1,1 +1,13 @@
-<h1>Hello {{ name|upper }}!</h1>
+{% extends 'base.html' %}
+{% block content %} 
+
+{% for message in get_flashed_messages() %}
+<div class="alert alert-success alert-dismissible show" role="alert">
+ Welcome,  {{ name }} - {{ message }}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+{% endfor %}
+<h1>Hello {{ name|lower }}!</h1>
+{% endblock %}
