@@ -10,4 +10,7 @@
 
 {% endfor %}
 <h1>Hello {{ name|lower }}!</h1>
+{% for our_user in our_users %}
+    {{ our_user.id }}.{{ our_user.name }} - {{ our_user.email }}</br>
+    {% endfor %}
 {% endblock %}
